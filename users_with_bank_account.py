@@ -14,7 +14,7 @@ class BankAccount:
         if self.balance - amount <= 0:
             print("Insufficient funds: Charging a $5 fee")
             self.balance -= 5
-            return self
+            # return self
         self.balance -= amount
         print(f"{self.name} made a withdrawal of {amount}")
         return self
@@ -55,6 +55,6 @@ class User:
 
 briana = User("Briana")
 
-briana.make_deposit(100)
-briana.display_user_balance()
+briana.make_deposit(100).make_withdrawal(150).display_user_balance()
+# briana.display_user_balance()
 
